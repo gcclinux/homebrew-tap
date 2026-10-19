@@ -1,35 +1,46 @@
 # Homebrew Tap for gcclinux
 
-This is the official Homebrew tap for [WeatherWidget](https://github.com/gcclinux/WeatherWidget) and tools maintained by gcclinux.
+Official Homebrew tap for [WeatherWidget](https://github.com/gcclinux/WeatherWidget) and tools maintained by gcclinux.
 
 ## Installation
 
-### WeatherWidget (macOS App)
+### 1. Tap the repository
 
-To install the desktop / menu bar GUI app:
+```bash
+brew tap gcclinux/tap
+```
+
+*(Note: On modern Homebrew, if prompted, trust the tap with `brew trust gcclinux/tap`)*
+
+### 2. Install WeatherWidget (macOS App)
+
+To install the desktop and menu bar GUI app:
+
+```bash
+brew install --cask weatherwidget
+```
+
+Or install in a single command:
 
 ```bash
 brew install --cask gcclinux/tap/weatherwidget
 ```
 
-Or tap first, then install:
+---
 
-```bash
-brew tap gcclinux/tap
-brew install --cask weatherwidget
-```
+### Optional: WeatherWidget CLI (Standalone Binary)
 
-### WeatherWidget CLI (Standalone Binary)
-
-To install the standalone universal CLI binary:
+To install the standalone universal CLI binary into `/opt/homebrew/bin` or `/usr/local/bin`:
 
 ```bash
 brew install gcclinux/tap/weatherwidget-cli
 ```
 
+---
+
 ## Updating
 
-To update installed software from this tap:
+To update to the latest versions:
 
 ```bash
 brew update
@@ -40,7 +51,9 @@ brew upgrade weatherwidget-cli
 ## Uninstalling
 
 ```bash
+# GUI App
 brew uninstall --cask weatherwidget
-# or
+
+# CLI
 brew uninstall weatherwidget-cli
 ```
