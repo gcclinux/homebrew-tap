@@ -1,4 +1,4 @@
-# Homebrew Tap for gcclinux
+in README # Homebrew Tap for gcclinux
 
 Official Homebrew tap for [WeatherWidget](https://github.com/gcclinux/WeatherWidget) and tools maintained by gcclinux.
 
@@ -26,6 +26,12 @@ Or install in a single command:
 
 ```bash
 brew install --cask gcclinux/tap/weatherwidget
+```
+
+Then remove the macOS quarantine flag so Gatekeeper allows the app to open:
+
+```bash
+xattr -dr com.apple.quarantine /Applications/WeatherWidget.app
 ```
 
 ---
